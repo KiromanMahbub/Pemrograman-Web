@@ -3,56 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <title>Registrasi</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url('game_bg.jpg'); 
+            background-size: cover;
+            background-position: center;
+        }
+
+        .register-form {
+            background: linear-gradient(135deg, #102fbb, #fc2525); 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            color: #fff;
+        }
+
+        .register-form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .register-form label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .register-form input,
+        .register-form select {
+            border: none;
+            border-bottom: 2px solid #fff; 
+            background: transparent;
+            color: #fff;
+            outline: none;
+            width: calc(100% - 40px); 
+            padding: 10px;
+            margin: 0 10px; 
+            display: block;
+        }
+
+        .register-form input::placeholder {
+            color: rgba(255, 255, 255, 0.7); 
+        }
+
+        .register-form select {
+            color: #000; 
+            background: #fff; 
+            border-radius: 5px;
+            padding: 5px;
+            width: calc(100% - 20px);
+            margin: 0 10px;
+        }
+
+        .register-form button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4e8cf7;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .register-form button:hover {
+            background-color: #3b6fd8;
+        }
+
+        .register-form p {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .register-form a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .register-form input[type="checkbox"],
+        .register-form input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .terms-container {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Form Registrasi</h1>
-    <form action="game.html" method="get">
-        <table border="1" cellpadding="5" cellspacing="0">
-            <tr>
-                <td><label for="username">Username:</label></td>
-                <td><input type="text" id="username" name="username" required></td>
-            </tr>
-            <tr>
-                <td><label for="password">Password:</label></td>
-                <td><input type="password" id="password" name="password" required></td>
-            </tr>
-            <tr>
-                <td><label for="photo">Foto Profil:</label></td>
-                <td><input type="file" id="photo" name="photo" accept="image/*"></td>
-            </tr>
-            <tr>
-                <td>Jenis Kelamin:</td>
-                <td>
-                    <input type="radio" id="male" name="gender" value="Laki-laki">
-                    <label for="male">Laki-laki</label>
-                    <input type="radio" id="female" name="gender" value="Perempuan">
-                    <label for="female">Perempuan</label>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="country">Negara:</label></td>
-                <td>
-                    <select id="country" name="country">
-                        <option value="id">Indonesia</option>
-                        <option value="us">Amerika Serikat</option>
-                        <option value="jp">Jepang</option>
-                        <option value="kr">Korea Selatan</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="checkbox" id="terms" name="terms" required>
-                    <label for="terms">Saya menyetujui <a href="terms.html">syarat & ketentuan</a></label>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" align="center">
-                    <button type="submit">Daftar</button>
-                </td>
-            </tr>
-        </table>
+    <form class="register-form" action="game.html" method="get">
+        <h1>Form Registrasi</h1>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="photo">Foto Profil:</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+
+        <label>Jenis Kelamin:</label>
+        <div class="radio-group">
+            <input type="radio" id="male" name="gender" value="Laki-laki">
+            <label for="male">Laki-laki</label>
+            <input type="radio" id="female" name="gender" value="Perempuan">
+            <label for="female">Perempuan</label>
+        </div>
+
+        <label for="country">Negara:</label>
+        <select id="country" name="country">
+            <option value="id">Indonesia</option>
+            <option value="us">Amerika Serikat</option>
+            <option value="jp">Jepang</option>
+            <option value="kr">Korea Selatan</option>
+        </select>
+
+        <div class="terms-container">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">Saya menyetujui <a href="terms.html">syarat & ketentuan</a></label>
+        </div>
+
+        <button type="submit">Daftar</button>
+        
+        <p>Sudah punya akun? <a href="login.html">Login di sini</a></p>
     </form>
-    <p>Sudah punya akun? <a href="login.html">Login di sini</a></p>
 </body>
 </html>
