@@ -3,27 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url('game_bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .login-form {
+            background: linear-gradient(135deg, #102fbb, #fc2525);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            color: #fff;
+        }
+
+        .login-form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-form label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .login-form input {
+            border: none;
+            border-bottom: 2px solid #fff; 
+            background: transparent;
+            color: #fff;
+            outline: none;
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin: 0 10px; 
+            display: block;
+        }
+
+        .login-form input::placeholder {
+            color: rgba(255, 255, 255, 0.7); 
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4e8cf7;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-form button:hover {
+            background-color: #3b6fd8;
+        }
+
+        .login-form p {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .login-form a {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Form Login</h1>
-    <form action="game.html" method="get">
-        <table border="1" cellpadding="5" cellspacing="0">
-            <tr>
-                <td><label for="username">Username:</label></td>
-                <td><input type="text" id="username" name="username" required></td>
-            </tr>
-            <tr>
-                <td><label for="password">Password:</label></td>
-                <td><input type="password" id="password" name="password" required></td>
-            </tr>
-            <tr>
-                <td colspan="2" align="center">
-                    <button type="submit">Login</button>
-                </td>
-            </tr>
-        </table>
+    <form class="login-form" action="game.html" method="get">
+        <h1>Form Login</h1>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+        <p><a href="forgot-password.html">Lupa password?</a></p>
+        <p>Belum punya akun? <a href="registrasi.html">Daftar di sini</a></p>
     </form>
-    <p><a href="forgot-password.html">Lupa password?</a></p>
-    <p>Belum punya akun? <a href="registrasi.html">Daftar di sini</a></p>
 </body>
 </html>
