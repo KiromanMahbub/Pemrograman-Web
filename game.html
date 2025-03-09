@@ -3,61 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <title>Video Game Populer di Steam</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            background: url('game_bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        .game-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .game-item {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+
+        .game-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .ranking-table {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            width: 80%;
+            margin: 20px auto;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .ranking-table th, .ranking-table td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .ranking-table th {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .ranking-table tr:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .game-title i {
+            margin-right: 5px;
+            color: yellow;
+        }
+    </style>
 </head>
 <body>
-    <h1>Video Game Populer di Steam</h1>
-    <div class="game-container">
+    <div class="container text-center mt-4">
+        <h1><i class="fas fa-gamepad"></i> Video Game Populer di Steam</h1>
+    </div>
+
+    <div class="container game-container mt-4">
         <div class="game-item">
             <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg" alt="Counter-Strike 2">
-            <h2>Counter-Strike 2</h2>
-            <p>Counter-Strike 2 adalah game tembak-menembak taktis yang sangat populer, di mana tim teroris dan anti-teroris saling berhadapan dalam berbagai mode permainan.</p>
+            <h2 class="game-title"><i class="fas fa-crosshairs"></i> Counter-Strike 2</h2>
+            <p>Game tembak-menembak taktis antara teroris dan anti-teroris.</p>
         </div>
         <div class="game-item">
             <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/570/header.jpg" alt="Dota 2">
-            <h2>Dota 2</h2>
-            <p>Dota 2 adalah game arena pertempuran daring multipemain (MOBA) di mana dua tim beranggotakan lima pemain berusaha menghancurkan markas lawan.</p>
+            <h2 class="game-title"><i class="fas fa-chess-knight"></i> Dota 2</h2>
+            <p>MOBA strategi dengan tim beranggotakan lima pemain.</p>
         </div>
         <div class="game-item">
             <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/578080/header.jpg" alt="PUBG: BATTLEGROUNDS">
-            <h2>PUBG: BATTLEGROUNDS</h2>
-            <p>PUBG: BATTLEGROUNDS adalah game battle royale di mana 100 pemain bertarung untuk menjadi yang terakhir bertahan hidup di pulau terpencil.</p>
+            <h2 class="game-title"><i class="fas fa-skull"></i> PUBG: BATTLEGROUNDS</h2>
+            <p>Battle royale seru dengan 100 pemain di satu arena.</p>
         </div>
         <div class="game-item">
             <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1172470/header.jpg" alt="Apex Legends">
-            <h2>Apex Legends</h2>
-            <p>Apex Legends adalah game battle royale berbasis tim yang menampilkan berbagai karakter dengan kemampuan unik, berlatar di alam semesta Titanfall.</p>
+            <h2 class="game-title"><i class="fas fa-dragon"></i> Apex Legends</h2>
+            <p>Battle royale berbasis tim dengan karakter unik.</p>
         </div>
         <div class="game-item">
             <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/394510/header.jpg" alt="HELLDIVERS 2">
-            <h2>HELLDIVERS 2</h2>
-            <p>HELLDIVERS 2 adalah game tembak-menembak kooperatif di mana pemain bekerja sama untuk melindungi Super Earth dari ancaman alien.</p>
+            <h2 class="game-title"><i class="fas fa-shield-alt"></i> HELLDIVERS 2</h2>
+            <p>Game tembak-menembak kooperatif melawan alien.</p>
         </div>
         <div class="game-item">
             <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1203220/header.jpg" alt="NARAKA: BLADEPOINT">
-            <h2>NARAKA: BLADEPOINT</h2>
-            <p>NARAKA: BLADEPOINT adalah game battle royale dengan fokus pada pertarungan jarak dekat dan mobilitas tinggi, menampilkan senjata tradisional dan seni bela diri.</p>
+            <h2 class="game-title"><i class="fas fa-fist-raised"></i> NARAKA: BLADEPOINT</h2>
+            <p>Battle royale dengan pertarungan jarak dekat dan seni bela diri.</p>
         </div>
     </div>
 
-    <h2>Peringkat Game Berdasarkan Jumlah Pemain di Steam</h2>
-    <table border="1">
+    <div class="container text-center mt-5">
+        <h2><i class="fas fa-trophy"></i> Peringkat Game Berdasarkan Jumlah Pemain</h2>
+    </div>
+
+    <table class="ranking-table table mt-4">
         <tr>
             <th>Peringkat</th>
             <th>Judul Game</th>
             <th>Jumlah Pemain Puncak</th>
         </tr>
         <tr>
-            <td>1</td>
+            <td><i class="fas fa-medal" style="color: gold;"></i> 1</td>
             <td>Counter-Strike 2</td>
             <td>1.474.396</td>
         </tr>
         <tr>
-            <td>2</td>
+            <td><i class="fas fa-medal" style="color: silver;"></i> 2</td>
             <td>Dota 2</td>
             <td>705.679</td>
         </tr>
         <tr>
-            <td>3</td>
+            <td><i class="fas fa-medal" style="color: #cd7f32;"></i> 3</td>
             <td>PUBG: BATTLEGROUNDS</td>
             <td>627.348</td>
         </tr>
@@ -77,5 +140,7 @@
             <td>286.947</td>
         </tr>
     </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
